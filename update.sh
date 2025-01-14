@@ -1,1 +1,1 @@
-cp -rf modules/queens/build/web/* ./pages/queens
+cp -rf modules/queens/build/web/* ./projects/queens
