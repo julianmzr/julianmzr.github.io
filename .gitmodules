@@ -1,0 +1,3 @@
+[submodule "queens"]
+	path = queens
+	url = https://github.com/julianmzr/queens.git
