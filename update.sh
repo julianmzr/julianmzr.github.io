@@ -1,0 +1,1 @@
+cp -rf modules/queens/build/web/* ./pages/queens
