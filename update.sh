@@ -12,7 +12,7 @@ build_flutter_project() {
 }
 
 if [ $# -eq 0 ]; then
-    echo "Please provide an argument: 'queens' or 'all'"
+    echo "Please provide an argument: 'queens', 'solitaire' or 'all'"
     exit 1
 fi
 
@@ -20,12 +20,16 @@ case $1 in
     "queens")
         build_flutter_project "queens"
         ;;
+    "solitaire")
+        build_flutter_project "solitaire"
+        ;;
     "all")
         build_flutter_project "queens"
+        build_flutter_project "solitaire"
         # Add other project builds here
         ;;
     *)
-        echo "Invalid argument. Please use 'queens' or 'all'"
+        echo "Invalid argument. Please use 'queens', 'solitaire' or 'all'"
         exit 1
         ;;
 esac

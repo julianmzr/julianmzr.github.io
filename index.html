@@ -124,33 +124,54 @@
         }
     </style>
     <script>
-        const taglines = [
-            "making chess pieces fight for personal space",
-            "putting eight queens on a board (what could go wrong?)",
-            "where queens don't need kings",
-            "eight queens walk into a chessboard...",
-            "professional queen social distancing coordinator",
-            "helping queens avoid awkward encounters since 2024",
-            "because one queen wasn't dramatic enough",
-            "chess drama: eight queens, one board, no compromises",
-            "where every queen thinks she's the main character",
-            "royal chess chaos coordinator",
-            "turning chessboards into queen reality shows",
-            "like tetris, but with attitude and crowns",
-            "queens only want one thing: diagonal dominance",
-            "where queens don't share diagonals (or drama)",
-            "chess puzzles with a side of royal drama",
-            "keeping queens from starting board wars",
-            "diplomatic relations between eight stubborn queens",
-            "royal chess matchmaker (no fighting allowed)",
-            "chess queen personal space consultant",
-            "running a very exclusive queens-only club"
-        ];
+        const taglines = {
+            queens: [
+                "making chess pieces fight for personal space",
+                "putting eight queens on a board (what could go wrong?)",
+                "where queens don't need kings",
+                "eight queens walk into a chessboard...",
+                "professional queen social distancing coordinator",
+                "helping queens avoid awkward encounters since 2024",
+                "because one queen wasn't dramatic enough",
+                "chess drama: eight queens, one board, no compromises",
+                "where every queen thinks she's the main character",
+                "royal chess chaos coordinator",
+                "turning chessboards into queen reality shows",
+                "like tetris, but with attitude and crowns",
+                "queens only want one thing: diagonal dominance",
+                "where queens don't share diagonals (or drama)",
+                "chess puzzles with a side of royal drama",
+                "keeping queens from starting board wars",
+                "diplomatic relations between eight stubborn queens",
+                "royal chess matchmaker (no fighting allowed)",
+                "chess queen personal space consultant",
+                "running a very exclusive queens-only club"
+            ],
+            solitaire: [
+                "where cards go to find their forever home",
+                "professional card stacking simulator",
+                "turning chaos into columns since forever",
+                "because sorting cards is therapeutic",
+                "where aces and kings play nice",
+                "digital card meditation",
+                "procrastination: the card game",
+                "making card pyramids without the mess",
+                "where red and black learn to alternate",
+                "your daily dose of card zen",
+                "like tetris with suits and royalty",
+                "helping cards find their way home",
+                "the original swipe right",
+                "where patience is more than a virtue",
+                "cards just want to be in order"
+            ]
+        };
 
         // Wait for DOM to be fully loaded
         document.addEventListener('DOMContentLoaded', function() {
-            const tagline = taglines[Math.floor(Math.random() * taglines.length)];
-            document.getElementById('tagline').textContent = tagline;
+            const queensTagline = taglines.queens[Math.floor(Math.random() * taglines.queens.length)];
+            const solitaireTagline = taglines.solitaire[Math.floor(Math.random() * taglines.solitaire.length)];
+            document.getElementById('queens-tagline').textContent = queensTagline;
+            document.getElementById('solitaire-tagline').textContent = solitaireTagline;
         });
     </script>
 </head>
@@ -165,7 +186,16 @@
                 </svg>
             </div>
             <p class="project-title">Queens</p>
-            <p class="project-description" id="tagline"></p>
+            <p class="project-description" id="queens-tagline"></p>
+        </a>
+        <a href="./projects/solitaire/" class="project-card">
+            <div class="icon-container">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+                    <path d="M4 2C2.9 2 2 2.9 2 4V20C2 21.1 2.9 22 4 22H20C21.1 22 22 21.1 22 20V4C22 2.9 21.1 2 20 2H4M4 4H20V20H4V4M5 5V19H19V5H5M11.5 7C10.12 7 9 8.12 9 9.5C9 10.88 10.12 12 11.5 12C12.88 12 14 10.88 14 9.5C14 8.12 12.88 7 11.5 7M11.5 8.5C12.05 8.5 12.5 8.95 12.5 9.5C12.5 10.05 12.05 10.5 11.5 10.5C10.95 10.5 10.5 10.05 10.5 9.5C10.5 8.95 10.95 8.5 11.5 8.5M7 14H16V15.5H7V14M7 16.5H16V18H7V16.5Z"/>
+                </svg>
+            </div>
+            <p class="project-title">Solitaire</p>
+            <p class="project-description" id="solitaire-tagline"></p>
         </a>
     </div>
 </body>

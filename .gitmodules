@@ -1,3 +1,6 @@
 [submodule "modules/queens"]
 	path = modules/queens
 	url = https://github.com/julianmzr/queens.git
+[submodule "modules/solitaire"]
+	path = modules/solitaire
+	url = https://github.com/julianmzr/solitaire
